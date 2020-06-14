@@ -1,0 +1,23 @@
+#clients-slider{
+    padding: 60px 0;
+    .container-fluid{
+        .container{
+            .row{
+                img{
+                    transition: all .4s;
+                    &:hover{
+                        transform: scale(1.06);
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 992px){
+        img{
+            width: 80% !important;
+        }
+        .cs-display{
+            display: none !important;
+        }
+    }
+}

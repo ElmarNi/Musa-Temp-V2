@@ -1,0 +1,79 @@
+#slider{
+    padding: 167px 0;
+    background: url(../img/1.jpg);
+    background-position: center center;
+    background-size: cover;
+    .container-fluid{
+        .container{
+            .row{
+                p{
+                    margin: 0;
+                    &:first-child{
+                        font-weight: 600;
+                        color: #212529;
+                        letter-spacing: 2px;
+                        margin-bottom: 5px;;
+                    }
+                    &:last-child{
+                        font-style: italic;
+                        letter-spacing: 2px;
+                        margin-top: 15px;
+                    }
+                }
+                h2{
+                    font-size: 40px;
+                    &:nth-of-type(2){
+                        color: $mainColor ;
+                    }
+                }
+            }
+            /*Scroll animation on center*/
+            .scroll{
+                width: 30px;
+                height: 55px;
+                border: 2px solid $mainColor;
+                border-top-left-radius: 30px;
+                border-top-right-radius: 30px;
+                border-bottom-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+                position: relative;
+                padding: 7px;
+                bottom: -130px;
+                .scroll-btn{
+                    border-radius: 100%;
+                    background: $mainColor;
+                    width: 8px;
+                    height: 8px;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    animation: scroll 2.5s infinite;
+                }
+            }
+        }
+    }
+    @keyframes scroll {
+        0%{
+            top: 10%;
+        }
+        50%{
+            top: 75%;
+        }
+        100%{
+            top: 10%;
+        }
+    }
+}
+@media (max-width: 767.98px){
+    #slider{
+        .row{
+            justify-content: center;
+            h2{
+                font-size: 30px !important;
+            }
+            .button-from-top{
+                display: none;
+            }
+        }
+    }
+}

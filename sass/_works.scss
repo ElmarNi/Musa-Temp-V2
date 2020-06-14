@@ -1,0 +1,194 @@
+#works{
+    padding: 100px 0 70px;
+    background: #f6f6f6;
+    .container-fluid{
+        .container{
+            .gallery-row{
+                /*Menu*/
+                ul{
+                    list-style: none;
+                    padding: 0;
+                    /*Added after and before for a layouts*/
+                    li{
+                        display: inline-block;
+                        position: relative;
+                        padding: 5px 0;
+                        background: #ddd;
+                        border-radius: 2px;
+                        margin-bottom: 15px;
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            right: 50%;
+                            bottom: 100%;
+                            left: 0;
+                            background: $mainColor;
+                            transition: all .4s;
+                            z-index: 0;
+                        }
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            top: 100%;
+                            right: 0;
+                            bottom: 0;
+                            left: 50%;
+                            background: $mainColor;
+                            transition: all .4s;
+                            z-index: 0;
+                        }
+                        &:hover{
+                            a{
+                                color: white;
+                            }
+                            &::before{
+                                bottom: 0%;
+                            }
+                            &::after{
+                                top: 0%;
+                            }
+                        }
+                        a{
+                            position: relative;
+                            color: #232323;
+                            font-weight: 400;
+                            letter-spacing: 1.5px;
+                            text-decoration: none;
+                            z-index: 1;
+                            padding: 5px 25px;
+                            transition: all .4s;
+                        }
+                    }
+                    li.active{
+                        background: $mainColor;
+                        a{
+                            color: white;
+                            /*three-angle*/
+                            span{
+                                background: $mainColor;
+                                position: absolute;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                top: 100%;
+                                border-width: 7px;
+                                border-style: solid;
+                                border-color: $mainColor #f6f6f6 #f6f6f6;
+                            }
+                        }
+                    }
+                }
+                /*hoverable for img*/
+                .hover{
+                    overflow: hidden;
+                    transition: all .4s;
+                    img{
+                        transition: all .4s;
+                    }
+                    &:hover{
+                        img{
+                            transform: scale(1.1);
+                        }
+                        .overlay-gallery{
+                            opacity: 1;
+                            transform: scale(1);
+                            .col-12{
+                                transform: scaleY(1);
+                            }
+                        }
+                    }
+                }
+                /*overlay for img*/
+                .overlay-gallery{
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    left: 15px;
+                    bottom: 15px;
+                    background: rgba($color: $mainColor, $alpha: .7);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    opacity: 0;
+                    transition: all .4s;
+                    transform: scale(.8);
+                    .col-12{
+                        transform: scaleY(.4);
+                        transition: all .4s;
+                    }
+                    a{
+                        i{
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 100%;
+                            font-size: 25px;
+                            color: $mainColor;
+                            background: white;
+                            padding-top: 13px;
+                            text-align: center;
+                            transition:all .4s;
+                            &:hover{
+                                transform: translateY(-5px);
+                            }
+                        }
+                    }
+                    h4{
+                        font-family: $dosis;
+                        color: white;
+                        font-size: 20px;
+                        letter-spacing: 1px;
+                        font-weight: 600;
+                    }
+                    p{
+                        font-size: 12px;
+                        font-style: italic;
+                        color: white;
+                        font-weight: 600;
+                    }
+                }
+            }
+            .works-info{
+                .content{
+                    background: rgba(255,255,255,.7);
+                    h1{
+                        font-size: 36px;
+                        font-weight: 600;
+                        color: #232323;
+                    }
+                    h3{
+                        color: #232323;
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                    i{
+                        color: $mainColor;
+                        font-size: 36px;
+                    }
+                }
+                .col-md-6{
+                    &:nth-child(1){
+                        .bg-imgs{
+                            background: url(../img/info.jpg);
+                        }
+                    }
+                    &:nth-child(2){
+                        .bg-imgs{
+                            background: url(../img/info-2.jpg);
+                        }
+                    }
+                    &:nth-child(3){
+                        .bg-imgs{
+                            background: url(../img/info3.jpg);
+                        }
+                    }
+                    &:nth-child(4){
+                        .bg-imgs{
+                            background: url(../img/info-4.jpg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

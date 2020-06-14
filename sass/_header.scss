@@ -1,0 +1,73 @@
+header{
+    position: sticky;
+    top: 0;
+    background: white;
+    box-shadow: 0 1px 3px rgba(50, 50, 50, 0.2);
+    z-index: 9999999999999;
+    .container-fluid{
+        .container{
+            .row{
+                .logo{
+                    a{
+                        font-size: 30px;
+                        color: #232323;
+                        text-decoration: none;
+                        font-weight: 600;
+                        &:hover{
+                            color: #232323;
+                        }
+                        
+                    }
+                    span{
+                        font-size: 30px;
+                        color: $mainColor;
+                        margin-left: -5px;
+                    }
+                }
+                /*Costumized default bootstrap nav*/
+                .large-screen-nav{
+                    a{
+                        padding: 25px 5px;
+                        font-size: 15px;
+                        color: #232323;
+                        transition: all .4s;
+                        position: relative;
+                        letter-spacing: 1px;
+                        margin-right: 20px;
+                        &::after{
+                            content: "";
+                            width: 0px;
+                            background: $mainColor;
+                            height: 2px;
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translate(-50%);
+                            transition: all .4s;
+                        } 
+                        &:hover{
+                            color: $mainColor;
+                            &::after{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767.98px){
+    header{
+        .large-screen-nav{
+            display: none;
+        }
+    }
+}
+@media (min-width:768px){
+    header{
+        .small-screen-nav{
+            display: none;
+        }
+    }
+}

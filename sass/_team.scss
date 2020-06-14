@@ -1,0 +1,82 @@
+#team{
+    padding: 100px 0 70px;
+    .container-fluid{
+        .container{
+            .team-content{
+                .skew{
+                    position: absolute;
+                    bottom: -80px;
+                    background: white;
+                    width: 155%;
+                    right: -15px;
+                    height: 78px;
+                    transform: skewY(-17deg);
+                    transition: all .4s;
+                }
+                /*Hoverable class for hover*/
+                .hover{
+                    transition: all .4s;
+                    &:hover{
+                        .overlay{
+                            right: 0;
+                            bottom: 0;
+                            .icon{
+                                opacity: 1;
+                                transition-delay: .4s;
+                            }
+                        }
+                        .skew{
+                            transform: skewY(0);
+                        }
+                    }
+                }
+                /*overlay class for overlay of img*/
+                .overlay{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 100%;
+                    bottom: 100%;
+                    background: rgba(0,0,0,0.7);
+                    transition: all .5s ease .1s;
+                    .icon{
+                        position: relative;
+                        top: 50%;
+                        transform: translateY(-52%);
+                        opacity: 0;
+                        transition-delay: 0s;
+                        a{
+                            &:first-child{
+                                padding: 9px 14px;
+                            }
+                            border: 1px solid white;
+                            border-radius: 2px;
+                            padding: 9px 10px;
+                            transition: all .4s;
+                            transition-delay: .5s;
+                            &:hover{
+                                border-color: $mainColor;
+                                background: $mainColor;
+                            }
+                            i{
+                                font-size: 16px;
+                                color: #f6f6f6;
+                            }
+                        }
+                    }
+                }
+                h2{
+                    font-size: 22px;
+                    font-family: $dosis;
+                    letter-spacing: 1px;
+                }
+                p{
+                    color: $mainColor;
+                    font-style: italic;
+                    border-bottom: 2px solid $mainColor;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

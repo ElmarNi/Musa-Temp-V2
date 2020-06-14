@@ -1,0 +1,42 @@
+
+@import 'lib/variable';
+@import 'lib/common';
+@import 'lib/mixins';
+@import 'header';
+@import 'slider';
+@import 'feature';
+@import 'about-us';
+@import 'professions';
+@import 'works';
+@import 'team';
+@import 'clients';
+@import 'clients-slider';
+@import 'license';
+@import 'posts';
+@import 'subs';
+@import 'form';
+@import 'footer';
+
+.go-to-top{
+    background: #232323;
+    border-radius: 2px;
+    bottom: 25px;
+    position: fixed;
+    right: 25px;
+    border: none;
+    transition: all .4s;
+    padding: 4px 6px;
+    a{
+        padding: 7px 4px;
+        text-decoration: none;
+        color: white;
+    }
+    &:hover{
+        background: $mainColor;
+    }
+}
+
+
+
+
+

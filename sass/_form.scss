@@ -1,0 +1,56 @@
+#form{
+    padding: 50px 0 70px;
+    .container-fluid{
+        .container{
+            .row{
+                h3{
+                    font-size: 28px;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                }
+                h4{
+                    color: #2e2e2e;
+                    font-family: $dosis;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    font-size: 18px;
+                }
+                ul{
+                    list-style: none;
+                    li{
+                        i{
+                            color: $mainColor;
+                            font-size: 22px;
+                            margin-bottom: 7px;
+                        }
+                        a{
+                            text-decoration: underline;
+                            color: #626262;
+                            transition: all .4s;
+                            &:hover{
+                                color: $mainColor;
+                            }
+                        }
+                    }
+                }
+                input,textarea{
+                    border: 1px solid #e5e5e5;
+                    border-radius: 4px;
+                    margin-bottom: 20px;
+                    padding: 10px 15px;
+                    transition: all 0.3s ease 0s;
+                    width: 100%;
+                    outline: none;
+                    margin-left: 15px;
+                    &:focus{
+                        border-color: $mainColor;
+                    }
+                }
+                textarea{
+                    padding-right: 25px;
+                    
+                }
+            }
+        }
+    }
+}

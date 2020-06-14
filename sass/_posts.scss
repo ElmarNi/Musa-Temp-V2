@@ -1,0 +1,90 @@
+#posts{
+    padding: 100px 0 70px;
+    .container-fluid{
+        .container{
+            .content-row{
+                h2{
+                    font-size: 22px;
+                    letter-spacing: 1px;
+                }
+                a{
+                    transition: all .4s;
+                    text-decoration: none;
+                    &:hover{
+                        color: $mainColor;
+                    }
+                }
+                i{
+                    color: $mainColor;
+                }
+                .hover{
+                    box-shadow: 0 1px 4px rgba(0,0,0,.15);
+                    transition: all 0.3s ease 0s;
+                    border: none !important;
+                    &:hover{
+                        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+                    }
+                }
+                .card-body{
+                    ul{
+                        list-style: none;
+                        padding: 0;
+                        li{
+                            display: inline-block;
+                            a{
+                                color: #666;
+                            }
+                        }
+                    }
+                }
+                .card-footer{
+                    border: none;
+                    ul{
+                        list-style: none;
+                        padding: 0;
+                        li{
+                            i{
+                                font-size: 18px;
+                            }
+                            a{
+                                font-size: 12px;
+                                color: #232323;
+                                letter-spacing: 0.5px;
+                                &:hover{
+                                    color: $mainColor;
+                                }
+                            }
+                            &:last-child{
+                                a{
+                                    &::before{
+                                        content: "";
+                                        position: absolute;
+                                        left: 0;
+                                        right: 50%;
+                                        bottom: -3px;
+                                        height: 1px;
+                                        background: $mainColor;
+                                        transition: all .4s;
+                                        transform: translateX(-50%);
+                                        opacity: 0;
+                                    }
+                                    &:hover{
+                                        &::before{
+                                            transform: translateX(0);
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width:768px) and (max-width: 992px){
+        .cs-display{
+            display: none !important;
+        }
+    }
+}

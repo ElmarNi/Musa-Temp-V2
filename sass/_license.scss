@@ -1,0 +1,79 @@
+#license{
+    background: #f6f6f6;
+    padding: 100px 0 80px;
+    .container-fluid{
+        .container{
+            .content-row{
+                p{
+                    color: #232425;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                }
+                h3,span{
+                    font-family: $dosis;
+                    font-size: 48px;
+                    color: #232425;
+                    margin-bottom: -12px;
+                    font-weight: 700;
+                    letter-spacing: 2px;
+                    display: inline-block;
+                    transition: all .4s;
+                }
+                span{
+                    transition-delay: .3s;
+                }
+                ul{
+                    list-style: none;
+                    li{
+                        color: #2D3E50;
+                        font-weight: 600;
+                        letter-spacing: 1px;
+                        i{
+                            color: $mainColor;
+                            font-size: 13px;
+                            transition:all .4s;
+                            transition-delay: .3s;
+                        }
+                    }
+                }
+                /*hover class for all hovers and box-whadow,border-radius*/
+                .hover{
+                    background: white;
+                    border-radius: 4px;
+                    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+                    transition: all .4s ease;
+                    &:hover{
+                        background: $mainColor;
+                        p,h3,span,li,i{
+                            color: white;
+                        }
+                        button{
+                            border-color: white;
+                        }
+                    }
+                }
+                /*static-hover class for medium div because this div look like a .hover class*/
+                .static-hover{
+                    border-radius: 4px;
+                    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+                    background: $mainColor;
+                        p,h3,span,li,i{
+                            color: white;
+                        }
+                        button{
+                            border-color: white;
+                            background: white;
+                            a{
+                                color: $mainColor;
+                            }
+                        }
+                }
+            }
+        }
+    }
+    @media (min-width:768px) and (max-width: 992px){
+        .cs-display{
+            display: none !important;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+#professions{
+    padding: 100px 0 70px;
+    .container-fluid{
+        .container{
+            .box-row{
+                .icon{
+                    transition: all 1s;
+                    width: 36px;
+                    height: 36px;
+                    text-align: center;
+                    display: inline-block;
+                    i{
+                        color: $mainColor;
+                        font-size: 36px;
+                    }
+                }
+                p{
+                    font-size: 13px;
+                }
+                /*Created hoverable class for boxes*/
+                .hover{
+                    transition: all .4s ease 0s;
+                    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+                    &:hover{
+                        transform: translateY(-10px);
+                        .icon{
+                            transform: translateY(-10px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+#feature{
+    padding: 80px 0 40px 0;
+    .container-fluid{
+        .container{
+            .box-row{
+                p{
+                    font-size: 13px;
+                }
+                .item{
+                    width: 50px;
+                    height: 50px;
+                    position: relative;
+                    background: black;
+                    border-radius: 2px;
+                    top: -27px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    transition: all .3s;
+                    i{
+                        position: absolute;
+                        border: 1px solid white;
+                        color: white;
+                        padding: 7px 5px;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%,-50%);
+                        border-radius: 2px;
+                    }
+                }
+                .hover{
+                    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+                    transition: all .3s;
+                    &:hover{
+                        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+                        .item{
+                            background: $mainColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*last box responsive*/
+@media (min-width: 768px) and (max-width: 992px){
+    #feature{
+        .box-row{
+            .responsive-div{
+                display: none !important;
+            }
+        }
+    }   
+}

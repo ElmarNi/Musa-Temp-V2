@@ -1,0 +1,85 @@
+#about-us{
+    padding: 100px 0 87px;
+    background: #f6f6f6;
+    .container-fluid{
+        .container{
+            .row{
+                h2{
+                    font-size: 30px;
+                }
+                h4{
+                    font-family: $dosis;
+                    letter-spacing: 1px;
+                    font-weight: normal;
+                }
+                strong{
+                    color: #626262;
+                }
+                /*icons with content*/
+                .icons-content{
+                    p{
+                        display: inline;
+                        letter-spacing: 1px;
+                    }
+                    i{
+                        background: $mainColor;
+                        color: #f6f6f6;
+                        font-size: 22px;
+                        height: 45px;
+                        line-height: 45px;
+                        text-align: center;
+                        width: 45px;
+                        border-radius: 2px;
+                    }
+                }
+                /*icons without content*/
+                .icon{
+                    a{
+                        &:first-child{
+                            padding: 9px 14px;
+                        }
+                        border: 2px solid black;
+                        border-radius: 2px;
+                        padding: 9px 12px;
+                        transition: all .4s;
+                        &:hover{
+                            border-color: $mainColor;
+                            background: $mainColor;
+                            i{
+                                color: #f6f6f6;
+                            }
+                        }
+                        i{
+                            font-size: 16px;
+                            color: black;
+                            transition: all .4s;
+                            transition-delay: .6s;
+                        }
+                    }
+                    
+                }
+                /*customized bootstrap progress bar*/
+                .progress-bar-div{
+                    p{
+                        color: #232323;
+                        letter-spacing: 1px;
+                    }
+                    .progress{
+                        border-radius: 0px;
+                        background: #dddddd;
+                        height: 15px;
+                        .progress-bar{
+                            background: $mainColor;
+                            border-radius: 0 10px 10px 0;
+                            text-align: right;
+                            padding-right: 5px;
+                            span{
+                                font-size: 11px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

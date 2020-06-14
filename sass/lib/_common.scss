@@ -1,0 +1,107 @@
+body{
+    font-size: 14px;
+    font-family: $openSans;
+    /*Changed container class of bootsrap 4*/
+    @media (min-width: 1200px){
+        .container {
+            max-width: 1200px !important;
+        }
+    }
+    h2{
+        font-family: $openSans;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 32px;
+        color: #2e2e2e;
+        letter-spacing: 1px;
+    }
+    p{
+        font-family: $openSans;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #626262;
+    }
+    h3{
+        font-family: $dosis;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #2e2e2e;
+        letter-spacing: 1px;
+    }
+}
+/*main buttons*/
+.button-from-left, .button-from-top{
+    padding: 10px 30px;
+    background: $mainColor;
+    border: 1px solid $mainColor;
+    position: relative;
+    transition: all .4s;
+    border-radius: 2px;
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 100%;
+        background: white;
+        opacity: 0;
+        transition: all .5s;
+        border-radius: 2px;
+    }
+    a{
+        position: relative;
+        text-decoration: none;
+        font-family: $dosis;
+        color: white;
+        font-weight: 600;
+        letter-spacing: 2px;
+        z-index: 1;
+    }
+    &:hover{
+        .overlay{
+            left: 0;
+            right: 0;
+            opacity: 1;
+        }
+        a{
+            color: $mainColor;
+        }
+    }
+}
+.button-from-top{
+    .overlay{
+        right: 0;
+        bottom: 100%;
+    }
+    &:hover{
+        .overlay{
+            bottom: 0;
+        }
+    }
+}
+/*p tag for section header contents*/
+.header-p{
+    letter-spacing: 1px;
+    &::before{
+        content: "";
+        height: 2px;
+        width: 100px;
+        background: $mainColor;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    &::after{
+        content: "";
+        height: 13px;
+        width: 13px;
+        background: $mainColor;
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translate(-50%) rotate(45deg);
+    }
+}
